@@ -552,11 +552,15 @@ $("#purchaseBtn").on('click', function () {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                // Create an order object - Object Literal
+                // Create an object - Object Literal
                 let order = {
                     orderId: orderId,
                     orderDate: orderDate,
                     customerId: customerId,
+                    orderItems: chosenItems,
+                    totalPrice: orderTotal,
+                    discount: orderDiscount,
+                    subTotal: orderSubTotal
                 };
 
                 // For testing
